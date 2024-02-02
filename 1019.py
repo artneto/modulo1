@@ -6,10 +6,6 @@ N = int(input())
 horas = N // 3600
 resto = N % 3600
 minutos = resto //60
-resto = minutos % 60
-segundos = resto // 60
-rest_segundos = segundos % 60
-second = rest_segundos
+segundos = resto % 60
 
-
-print(f'{horas}:{minutos}:{resto}')
+print(f'{horas}:{minutos}:{segundos}')
