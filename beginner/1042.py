@@ -3,6 +3,7 @@
 
 A, B, C = map(int, input().split())
 
+valoresOriginal = [A, B, C]
 
 if A > C:
     A, C = C, A
@@ -10,6 +11,10 @@ if A > B:
     A, B = B, A 
 if B > C: 
     B, C = C, B
-print(f'{A} {B} {C}')
+print(A)
+print(B)
+print(C)
 print()
-print(f'{A} {B} {C}')
+print(valoresOriginal[0])
+print(valoresOriginal[1])
+print(valoresOriginal[2])
