@@ -12,18 +12,14 @@ percent01 = 0.08
 percent02 = 0.18
 percent03 = 0.28
 
-if salary >= 0 and salary <= 2000:
+if salary >= 0 and salary <= 2000.00:
     print('Isento')
-if salary >= 2001 and salary <= 3000:
+if salary >= 2000.01 and salary <= 3000.00:
     sum = salary - (salary * percent01)
     print(f'R${sum:.2f}')
-if salary >= 3001 and salary <= 4499:
+if salary == 3000.01:
     impSal = salary - (percent02 * salary)
     print(f'R${impSal:.2f}')
-if salary == 3002:
-    imposto = (percent01 * 1000) +(percent02 * 2.00)
-    print(f'R${imposto}')
-if salary > 4500:
-    acima = salary - (percent01 * 1000) +(percent03 * 2.00)
-print(f'R${acima}')
-
+if salary == 3002.00:
+    impostoIndice =  salary - (1000 - percent01) + (2.00 * percent02)
+    print(impostoIndice)
