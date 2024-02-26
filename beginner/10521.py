@@ -7,19 +7,18 @@
 #  on R$1000.00 + 18% on R$2.00, which results in R$80.36 in total. The value 
 # must be printed with two decimal places.
 
-salary = float(input())
-percent01 = 0.08
-percent02 = 0.18
-percent03 = 0.28
+salario = float(input())
+imposto = 0
 
-if salary >= 0 and salary <= 2000.00:
+if salario >= 0.00 and salario <= 2000.00:
     print('Isento')
-if salary >= 2000.01 and salary <= 3000.00:
-    sum = salary - (salary * percent01)
-    print(f'R${sum:.2f}')
-if salary == 3000.01:
-    impSal = salary - (percent02 * salary)
-    print(f'R${impSal:.2f}')
-if salary == 3002.00:
-    impostoIndice =  salary - (1000 - percent01) + (2.00 * percent02)
-    print(impostoIndice)
+elif salario <= 3000.00:
+    imposto = (salario - 2000.00) * 0.08
+    print(f'R$ {imposto:.2f}')
+elif salario <= 4500.00:
+    imposto = (1000.00 * 0.08) + ((salario - 3000.00) * 0.18)
+    print(f'R$ {imposto:.2f}')
+else:
+    imposto = (1000.00 * 0.08) + (1500.00 * 0.18) + ((salario - 4500.00) * 0.28)
+    print(f'R$ {imposto:.2f}')
+
