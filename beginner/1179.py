@@ -2,34 +2,30 @@
 # But the size of each of the two vectors is 5 positions. Then, each time one of the two vectors fills, you must print
 # the entire vector and use it again for the next numbers that are read. Once reading is complete, the content remaining
 # in each of the two vectors must be printed, first printing the values of the odd vector. Each vector can be filled in as many times as necessary.
+def imprimir_par(par):
+    for i in range(len(par)):
+        print(f'par[{i}] = {par[i]}')
+
+def imprimir_impar(impar):
+    for i in range(len(impar)):
+        print(f'impar[{i}] = {impar[i]}')
 
 par = []
 impar = []
 
-for _ in range(15):
-    element = int(input())
-    if element % 2 == 0:
-        if len(par) < 5:
-            par.append(element)
-        else:
-            for i in range(5):
-                print(f'par[{i}] = {par[i]}')
-            par.clear()
-            par.append(element)
+for i in range(15):
+    num = int(input())
+    if num % 2 == 0:
+        par.append(num)
+        if len(par) == 5:# Se o vetor par encheu, imprime e reinicia
+            imprimir_par(par)
+            par = []
     else:
-        if len(impar) < 5:
-            impar.append(element)
-        else:
-            for i in range(5):
-                print(f'impar[{i}] = {impar[i]}')
-            impar.clear()
-            impar.append(element)
-
-for i in range(len(par)):
-    print(f'par[{i}] = {par[i]}')
-
-for i in range(len(impar)):
-    print(f'impar[{i}] = {impar[i]}')
+        impar.append(num)
+        if len(impar) == 5: # Se o vetor par encheu, imprime e reinicia
+            imprimir_impar(impar)
+            impar = []
 
 
-#com funcao .clear uso sempre que preciso reiniciar os vetores par e impar sempre que um deles atingir o tamanho máximo. 
+imprimir_par(par)
+imprimir_impar(impar)
