@@ -8,17 +8,18 @@
 #The first line displays the message “Lowest value:” followed by a space and the smallest value read in the input. 
 # The second line displays the message “Position:” followed by a space and the position of the vector in which the
 #  lowest read value is found, remembering that the vector starts at position zero.
-
+# Lê o tamanho do vetor
 N = int(input())
-X = [] * N
 
+num = list(map(int, input().split()))
 
-for i in range(N):
-    num = int(input())
-    X.append(num)
-    X.sort()
-    print(f'Menor valor: {X[0]}')
-    print(f'Posicao: 4')
+menor_numero = num[0]
+posicao = 0
 
- 
-   
+for i in range(1, N):
+    if num[i] < menor_numero:
+        menor_numero = num[i]
+        posicao = i
+
+print(f'Menor valor: {menor_numero}')
+print(f'Posicao: {posicao}')
