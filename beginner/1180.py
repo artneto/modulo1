@@ -11,15 +11,19 @@
 # Lê o tamanho do vetor
 N = int(input())
 
-num = list(map(int, input().split()))
+vetor = input().split()
 
-menor_numero = num[0]
-posicao = 0
+
+for i in range(N):
+    vetor[i] = int(vetor[i])
+
+menor = vetor[0]
 
 for i in range(1, N):
-    if num[i] < menor_numero:
-        menor_numero = num[i]
+    if vetor[i] < menor:
+        menor = vetor[i]
         posicao = i
+     
 
-print(f'Menor valor: {menor_numero}')
+print(f'Menor valor: {menor}')
 print(f'Posicao: {posicao}')
