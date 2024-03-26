@@ -4,22 +4,23 @@
 import random
 numeroSecreto = random.randint(1,3)
 
-player_01 = int(input())
+while True:
+    player_01 = int(input())
 
-if player_01 == numeroSecreto:
-    print('win')
-else:
-    if numeroSecreto % 2 == 0:
-        print('O número é par')
+    if player_01 == numeroSecreto:
+        print('win')
     else:
-        print('O número é ímpar')
-    if numeroSecreto % 3 == 0:
-        print('número é divisível por 3')
-    else:
-        print('número não é divisível por 3')
-    if  numeroSecreto >= 50:
-        print('O número é maior que 50')
-    else:
-        print('O número é menor que 50')
+        if numeroSecreto % 2 == 0:
+            print('O número é par')
+        else:
+            print('O número é ímpar')
+        if numeroSecreto % 3 == 0:
+            print('número é divisível por 3')
+        else:
+            print('número não é divisível por 3')
+        if  numeroSecreto >= 50:
+            print('O número é maior que 50')
+        else:
+            print('O número é menor que 50')
 
-print(numeroSecreto)
+    print(numeroSecreto)
