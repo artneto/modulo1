@@ -9,4 +9,4 @@ Y = float(input())
 
 cosumo_total = X / Y
 
-print(f'{cosumo_total:.3f} km/l)
+print(f'{cosumo_total:.3f} km/l')
