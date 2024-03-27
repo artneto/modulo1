@@ -18,6 +18,7 @@ for i in range(N):
     vetor[i] = int(vetor[i])
 
 menor = vetor[0]
+posicao = 0
 
 for i in range(1, N):
     if vetor[i] < menor:
