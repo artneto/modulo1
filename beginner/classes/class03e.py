@@ -1,4 +1,4 @@
-notas = [9.8, 7, 5.5, 8.9, 6.6, 4.9]
+notas = [9.8, 7, 5.5, 8.9, 6.6, 2.9]
 notasNovas = []
 
 for i in notas:
@@ -8,4 +8,12 @@ for i in notas:
 
 print(f'Notas que serão mostradas: {notasNovas}')
 
-any()
+notaAcrescimo = 0.2
+lista_somada = [elemento + notaAcrescimo for elemento in notas]
+print(lista_somada)
+
+for elemento in lista_somada:
+    if elemento >= 7:
+        print('O pai não vai mais castigá-la')
+    else:
+        print('O pai vai castigá-la')
